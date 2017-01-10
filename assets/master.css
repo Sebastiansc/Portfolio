@@ -97,13 +97,13 @@ h1 {
     font-size: 40px;
   }
 
-  .contact>ul {
+  .contact ul {
     display: flex;
     flex-direction: column;
   }
 
-  .contact>ul>li {
-    margin-bottom: 10px;
+  .contact ul li {
+    margin-bottom: 15px;
   }
 }
 

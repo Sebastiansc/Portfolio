@@ -34,13 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
   $('#about-link').click( () => {
     $('html,body').animate({
         scrollTop: $(".about").offset().top + 20},
-        'fast');
+        'slow');
   });
 
   $('#contact-link').click( () => {
     $('html,body').animate({
-        scrollTop: $(".contact").offset().top + 20},
-        'fast');
+        scrollTop:  $(document).height() + 1000},
+        'slow');
   });
 
   $(document).scroll( () => {
