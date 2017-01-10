@@ -15,7 +15,7 @@ body {
 
 a:active, a:focus {
   text-decoration: none;
-  color: #8f9193;
+  color: white;
 }
 
 /*--------------------- NAV BAR ---------------------- */
@@ -87,6 +87,11 @@ h1 {
 
   h1 {
     font-size: 40px;
+  }
+
+  .contact>ul {
+    display: flex;
+    flex-direction: column;;
   }
 }
 
@@ -162,19 +167,72 @@ h1 {
 }
 
 .photo-container {
-  height: 500px;
+  height: 100px;
 }
 
 .about {
-  display: flex;
-  align-items: center;
-  height: 90vh;
+  padding-top: 12rem;
+  height: 95vh;
+}
+
+@media(min-width: 931px){
+  .about .row {
+    display: flex;
+  }
+
+  /*.about {
+    margin-bottom: 6rem;
+  }*/
+}
+
+.about figure {
+  margin-bottom: 15px;
 }
 
 .desc {
   font-size: 2.2rem;
   line-height: 175%;
   color: #464b4e;
+  align-self: center;
   text-align: center;
 }
 /*--------------------- ABOUT END ---------------------------- */
+/*--------------------- CONTACT ---------------------------- */
+
+.contact {
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 6rem;
+  margin-bottom: 45px;
+}
+
+.contact ul {
+  text-align: center;
+}
+
+.contact ul li {
+  margin-right: 5px;
+}
+
+.contact ul li a {
+  color: black;
+}
+/*--------------------- CONTACT END ---------------------------- */
+/*--------------------- FOOTER ---------------------------- */
+footer {
+  background: #313233;
+  height: 70px;
+  padding: 25px;
+  margin-top: 50px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-size: 20px;
+  margin: 0;
+}
+/*--------------------- FOOTER END ---------------------------- */

@@ -11,15 +11,39 @@ document.addEventListener("DOMContentLoaded", () => {
     $('.fa-bars').toggle();
   });
 
+  $('#home-link').click( () => {
+    $('html,body').animate({
+        scrollTop: $(".home").offset().top + 20},
+        'slow');
+  });
+
   $('#port-link').click( () => {
     $('html,body').animate({
         scrollTop: $(".portfolio").offset().top + 20},
         'slow');
   });
 
+  $('#about-link').click( () => {
+    $('html,body').animate({
+        scrollTop: $(".about").offset().top + 20},
+        'fast');
+  });
+
+  $('#contact-link').click( () => {
+    $('html,body').animate({
+        scrollTop: $(".contact").offset().top + 20},
+        'fast');
+  });
+
   $(document).scroll( () => {
-    if ($('nav').offset().top > $('.portfolio').offset().top
-        || $('.fa-bars').offset().top > $('.portfolio').offset().top) {
+    let navTop = $('nav').offset().top;
+    let portfolioTop = $('.portfolio').offset().top;
+    let barsTop = $('.fa-bars').offset().top;
+    let aboutTop = $('.about').offset().top;
+    if (navTop > aboutTop || barsTop > aboutTop){
+      $('nav').removeClass('light-nav');
+      $('.fa-bars').removeClass('light-bars');
+    } else if ( navTop > portfolioTop || barsTop  > portfolioTop ) {
       $('nav').addClass('light-nav');
       $('.fa-bars').addClass('light-bars');
     } else {
