@@ -72,9 +72,17 @@ nav {
 
 /*--------------------- NAV BAR END ---------------------- */
 
+h1 {
+  font-size: 70px;
+}
+
 @media(max-width: 768px) {
   .fa {
     display: inline;
+  }
+
+  h1 {
+    font-size: 40px;
   }
 }
 
@@ -90,9 +98,6 @@ nav {
   height: 90vh;
 }
 
-h1 {
-  font-size: 5rem;
-}
 .last-name {
   color: rgb(106,168,79);
 }
