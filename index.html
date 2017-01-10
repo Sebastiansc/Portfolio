@@ -6,6 +6,7 @@
     <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, user-scalable = no">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity = "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="https://use.fontawesome.com/d460849ee8.js"></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity = "sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin = "anonymous"></script>
@@ -20,19 +21,20 @@
       <div class='center-block container'>
         <div class="row center-block">
           <div class="nav-col col-xs-12 col-sm-2 col-md-2 col-lg-2 col-lg-offset-1">
-            <a id='home-link' href="#">Home</a>
+            <a id='home-link' href="#"><i class="fa fa-home" aria-hidden="true"></i>  Home</a>
           </div>
           <div class="nav-col col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <a id="port-link" href="#portfolio">Portfolio</a>
+            <a id="port-link" href="#portfolio"><i class="fa fa-briefcase" aria-hidden="true"></i>  Portfolio</a>
           </div>
           <div class="nav-col col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <a id='about-link' href="#">About</a>
+            <a id='about-link' href="#">
+              <i class="fa fa-user" aria-hidden="true"></i>  About</a>
           </div>
           <div class="nav-col col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <a id='contact-link' href="#">Contact</a>
+            <a id='contact-link' href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a>
           </div>
           <div class="nav-col col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <a href="./assets/docs/resume.pdf" target='_blank'>Resume</a>
+            <a href="./assets/docs/resume.pdf" target='_blank'><i class="fa fa-file-text" aria-hidden="true"></i>  Resume</a>
           </div>
         </div>
       <div>
@@ -40,9 +42,19 @@
     <!-- NAV BAR END -->
 
     <!-- HOME -->
-    <main class='container home'>
+    <main class='container home animated bounceInDown'>
       <div class="sum-up center-block col-xs-12 col-sm-12">
         <h1>SEBASTIAN <span class='last-name'>CRUZ</span></h1>
+        <ul class='list-unstyled contact-info'>
+          <li><a target='_blank' href='https://www.github.com/Sebastiansc'><i class="fa fa-github" aria-hidden="true"></i></a></li>
+          <li><a target='_blank' href='https://angel.co/sebastian-cruz-2'><i class="fa fa-angellist" aria-hidden="true"></i></a></li>
+          <li><a target='_blank' href='https://www.linkedin.com/in/sebastian-cruz'><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li>
+            <a href="mailto:s.sebastian.cruz@gmail.com?Subject=Need an awesome software engineer" target='_blank'>
+              <i class="fa fa-envelope" aria-hidden="true"></i><br>
+            </a>
+          </li>
+        </ul>
         <h2>Software Engineer</h2>
       </div>
     </main>
@@ -51,169 +63,173 @@
     <!--  PORTFOLIO-->
     <main class='portfolio'>
       <h1 class='portfolio-title'>Portfolio</h1>
-      <!-- FLIKR -->
-      <section class='container project'>
-        <div class="">
-          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <a href='http://www.flikr.site' target='_blank' class='project-title'>FLIKR</a>
-            <p class='project-description'>
-              Flikr is a full stack single-page web application. Inspired by Yahoo's Flickr, Flikr allows users to share their photos and organize them in albums. Users can also favorite and comment on the communities photos's.
-            </p>
-            <div class="technologies">
-              <span>Ruby</span>
-              <span>Rails</span>
-              <span>JavaScript</span>
-              <span>React</span>
-              <span>Redux</span>
-              <span>Webpack</span>
-              <span>Git</span>
-              <span>CSS3</span>
-              <span>HTML5</span>
-              <span>PostgreSQL</span>
-              <span>jQuery</span>
-            </div>
-            <span class='photo-desc'></span>
-          </div>
-          <a href="http://www.flikr.site" target='_blank'>
-            <div id = "flikr-carousel" class = "carousel slide col-xs-12 col-sm-12 col-md-9 col-lg-9">
-              <!-- Carousel indicators -->
-              <ol class = "carousel-indicators">
-                <li data-target = "#flikr-carousel" data-slide-to = "0" class = "active"></li>
-                <li data-target = "#flikr-carousel" data-slide-to = "1"></li>
-                <li data-target = "#flikr-carousel" data-slide-to = "2"></li>
-              </ol>
-
-              <div class = "carousel-inner">
-                <div class = "item active">
-                  <img src = "./assets/images/photo-detail.png" alt = "First slide">
-                </div>
-
-                <div class = "item">
-                  <img src = "./assets/images/flikr-home.png" alt = "Second slide">
-                </div>
-
-                <div class = "item">
-                  <img src = "./assets/images/profile.png" alt = "Third slide">
-                </div>
+      <div class="animation-wrapper">
+        <!-- FLIKR -->
+        <section class='container project'>
+          <div class="">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <a href='http://www.flikr.site' target='_blank' class='project-title'>FLIKR</a>
+              <p class='project-description'>
+                Flikr is a full stack single-page web application. Inspired by Yahoo's Flickr, Flikr allows users to share their photos and organize them in albums. Users can also favorite and comment on the communities photos's.
+              </p>
+              <div class="technologies">
+                <span>Ruby</span>
+                <span>Rails</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Redux</span>
+                <span>Webpack</span>
+                <span>Git</span>
+                <span>CSS3</span>
+                <span>HTML5</span>
+                <span>PostgreSQL</span>
+                <span>jQuery</span>
               </div>
-
-              <!-- Carousel nav -->
-              <a class = "carousel-control left" href = "#flikr-carousel" data-slide = "prev">&lsaquo;</a>
-              <a class = "carousel-control right" href = "#flikr-carousel" data-slide = "next">&rsaquo;</a>+
+              <span class='photo-desc'></span>
             </div>
-          </a>
-        </div>
-      </section>
-      <!-- FLIKR  END-->
+            <a href="http://www.flikr.site" target='_blank'>
+              <div id = "flikr-carousel" class = "carousel slide col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                <!-- Carousel indicators -->
+                <ol class = "carousel-indicators">
+                  <li data-target = "#flikr-carousel" data-slide-to = "0" class = "active"></li>
+                  <li data-target = "#flikr-carousel" data-slide-to = "1"></li>
+                  <li data-target = "#flikr-carousel" data-slide-to = "2"></li>
+                </ol>
 
-      <!-- TYPEWARS -->
-      <section class='container project'>
-        <div class="">
-          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <a href='https://sebastiansc.github.io/Typewars/' target='_blank' class='project-title'>TYPEWARS</a>
-            <p class='project-description'>
-              Typewars is an interactive browser game built using JavaScript, HTML5 canvas and Create.js. I used the Singleton Pattern to assure player's ship's internal state remained constant throughout the interaction with other classes. Custom algorithms determine bullet direction and ship rotation
-            </p>
-            <div class="technologies">
-              <span>JavaScript</span>
-              <span>Create.js</span>
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>Git</span>
-              <span>jQuery</span>
-              <span>Webpack</span>
-            </div>
-            <span class='photo-desc'></span>
-          </div>
-          <a href="https://sebastiansc.github.io/Typewars/" target='_blank'>
-            <div id = "typewars-carousel" class = "carousel slide col-xs-12 col-sm-12 col-md-9 col-lg-9">
-              <!-- Carousel indicators -->
-              <ol class = "carousel-indicators">
-                <li data-target = "#typewars-carousel" data-slide-to = "0" class = "active"></li>
-                <li data-target = "#typewars-carousel" data-slide-to = "1"></li>
-              </ol>
+                <div class = "carousel-inner">
+                  <div class = "item active">
+                    <img src = "./assets/images/photo-detail.png" alt = "First slide">
+                  </div>
 
-              <div class = "carousel-inner">
-                <div class = "item active">
-                  <img src = "./assets/images/main_menu.png" alt = "First slide">
+                  <div class = "item">
+                    <img src = "./assets/images/flikr-home.png" alt = "Second slide">
+                  </div>
+
+                  <div class = "item">
+                    <img src = "./assets/images/profile.png" alt = "Third slide">
+                  </div>
                 </div>
 
-                <div class = "item">
-                  <img src = "./assets/images/typewars.png" alt = "Second slide">
-                </div>
+                <!-- Carousel nav -->
+                <a class = "carousel-control left" href = "#flikr-carousel" data-slide = "prev">&lsaquo;</a>
+                <a class = "carousel-control right" href = "#flikr-carousel" data-slide = "next">&rsaquo;</a>+
               </div>
-
-              <!-- Carousel nav -->
-              <a class = "carousel-control left" href = "#typewars-carousel" data-slide = "prev">&lsaquo;</a>
-              <a class = "carousel-control right" href = "#typewars-carousel" data-slide = "next">&rsaquo;</a>+
-            </div>
-          </a>
-        </div>
-      </section>
-      <!-- TYPEWARS END-->
-
-      <!-- OVERTRACK -->
-      <section class='container project'>
-        <div class="">
-          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <a href='http://www.overtrack.win' target='_blank' class='project-title'>OVERTRACK</a>
-            <p class='project-description'>
-              Overtrack is a single-page player statistic site for LoL. It uses Riot's public API to collect data from tens of thousands of players and allow user's to view it. I strongly leveraged PostgreSQL json data type to seamlessly store and serve large amounts of data. Implemented Redis on Ruby on Rails to cut response times by more than 70%.
-            </p>
-            <div class="technologies">
-              <span>Ruby</span>
-              <span>Rails</span>
-              <span>Redis</span>
-              <span>JavaScript</span>
-              <span>React</span>
-              <span>Redux</span>
-              <span>Webpack</span>
-              <span>Git</span>
-              <span>CSS3</span>
-              <span>HTML5</span>
-              <span>PostgreSQL</span>
-              <span>jQuery</span>
-            </div>
-            <span class='photo-desc'></span>
+            </a>
           </div>
-          <a href="http://www.overtrack.win" target='_blank'>
-            <div id = "overtrack-carousel" class = "carousel slide col-xs-12 col-sm-12 col-md-9 col-lg-9">
-              <!-- Carousel indicators -->
-              <ol class = "carousel-indicators">
-                <li data-target = "#overtrack-carousel" data-slide-to = "0" class = "active"></li>
-                <li data-target = "#overtrack-carousel" data-slide-to = "1"></li>
-              </ol>
+        </section>
+        <!-- FLIKR  END-->
 
-              <div class = "carousel-inner">
-                <div class = "item active">
-                  <img src = "./assets/images/leaderboard.png" alt = "First slide">
-                </div>
-
-                <div class = "item">
-                  <img src = "./assets/images/lol_profile.png" alt = "Second slide">
-                </div>
+        <!-- TYPEWARS -->
+        <section class='container project'>
+          <div class="">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <a href='https://sebastiansc.github.io/Typewars/' target='_blank' class='project-title'>TYPEWARS</a>
+              <p class='project-description'>
+                Typewars is an interactive browser game built using JavaScript, HTML5 canvas and Create.js. I used the Singleton Pattern to assure player's ship's internal state remained constant throughout the interaction with other classes. Custom algorithms determine bullet direction and ship rotation
+              </p>
+              <div class="technologies">
+                <span>JavaScript</span>
+                <span>Create.js</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Git</span>
+                <span>jQuery</span>
+                <span>Webpack</span>
               </div>
-
-              <!-- Carousel nav -->
-              <a class = "carousel-control left" href = "#overtrack-carousel" data-slide = "prev">&lsaquo;</a>
-              <a class = "carousel-control right" href = "#overtrack-carousel" data-slide = "next">&rsaquo;</a>+
+              <span class='photo-desc'></span>
             </div>
-          </a>
-        </div>
-      </section>
-      <!-- OVERTRACK END-->
+            <a href="https://sebastiansc.github.io/Typewars/" target='_blank'>
+              <div id = "typewars-carousel" class = "carousel slide col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                <!-- Carousel indicators -->
+                <ol class = "carousel-indicators">
+                  <li data-target = "#typewars-carousel" data-slide-to = "0" class = "active"></li>
+                  <li data-target = "#typewars-carousel" data-slide-to = "1"></li>
+                </ol>
+
+                <div class = "carousel-inner">
+                  <div class = "item active">
+                    <img src = "./assets/images/main_menu.png" alt = "First slide">
+                  </div>
+
+                  <div class = "item">
+                    <img src = "./assets/images/typewars.png" alt = "Second slide">
+                  </div>
+                </div>
+
+                <!-- Carousel nav -->
+                <a class = "carousel-control left" href = "#typewars-carousel" data-slide = "prev">&lsaquo;</a>
+                <a class = "carousel-control right" href = "#typewars-carousel" data-slide = "next">&rsaquo;</a>+
+              </div>
+            </a>
+          </div>
+        </section>
+        <!-- TYPEWARS END-->
+
+        <!-- OVERTRACK -->
+        <section class='container project'>
+          <div class="">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <a href='http://www.overtrack.win' target='_blank' class='project-title'>OVERTRACK</a>
+              <p class='project-description'>
+                Overtrack is a single-page player statistic site for LoL. It uses Riot's public API to collect data from tens of thousands of players and allow user's to view it. I strongly leveraged PostgreSQL json data type to seamlessly store and serve large amounts of data. Implemented Redis on Ruby on Rails to cut response times by more than 70%.
+              </p>
+              <div class="technologies">
+                <span>Ruby</span>
+                <span>Rails</span>
+                <span>Redis</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Redux</span>
+                <span>Webpack</span>
+                <span>Git</span>
+                <span>CSS3</span>
+                <span>HTML5</span>
+                <span>PostgreSQL</span>
+                <span>jQuery</span>
+              </div>
+              <span class='photo-desc'></span>
+            </div>
+            <a href="http://www.overtrack.win" target='_blank'>
+              <div id = "overtrack-carousel" class = "carousel slide col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                <!-- Carousel indicators -->
+                <ol class = "carousel-indicators">
+                  <li data-target = "#overtrack-carousel" data-slide-to = "0" class = "active"></li>
+                  <li data-target = "#overtrack-carousel" data-slide-to = "1"></li>
+                </ol>
+
+                <div class = "carousel-inner">
+                  <div class = "item active">
+                    <img src = "./assets/images/leaderboard.png" alt = "First slide">
+                  </div>
+
+                  <div class = "item">
+                    <img src = "./assets/images/lol_profile.png" alt = "Second slide">
+                  </div>
+                </div>
+
+                <!-- Carousel nav -->
+                <a class = "carousel-control left" href = "#overtrack-carousel" data-slide = "prev">&lsaquo;</a>
+                <a class = "carousel-control right" href = "#overtrack-carousel" data-slide = "next">&rsaquo;</a>+
+              </div>
+            </a>
+          </div>
+        </section>
+        <!-- OVERTRACK END-->
+      </div>
     </main>
     <!--  PORTFOLIO END-->
 
   <!--  ABOUT-->
     <main class='about container'>
-      <div class="row">
-        <div class="col-xs-4 col-sm-8 hidden-md hidden-lg"></div>
-        <figure class='col-xs-4 col-sm-12 col-md-3 col-lg-3'>
-          <img src="./assets/images/s_cruz.jpg" class='img-responsive me img-rounded' alt="Sebastian Cruz"/>
-        </figure>
-        <div class='desc col-xs-12 col-sm-12 col-md-9 col-lg-9'>
-          I'm a software engineer, entrepeneur and life long learner. I love facing complex problems that force me to find new and better approaches and technologies. I build dynamic web applications using JavaScript, React, Redux, Angular, Python, Ruby, Ruby on Rails, Django, HTML, CSS and SQL. I love closing the gap between an idea and a real world product.
+      <div class="about-wrapper">
+        <div class="row">
+          <div class="col-xs-4 col-sm-8 hidden-md hidden-lg"></div>
+          <figure class='col-xs-4 col-sm-12 col-md-3 col-lg-3'>
+            <img src="./assets/images/s_cruz.jpg" class='img-responsive me img-rounded' alt="Sebastian Cruz"/>
+          </figure>
+          <div class='desc col-xs-12 col-sm-12 col-md-9 col-lg-9'>
+            I'm a software engineer, entrepeneur and life long learner. I love facing complex problems that force me to find new and better approaches and technologies. I build dynamic web applications using JavaScript, React, Redux, Angular, Python, Ruby, Ruby on Rails, Django, HTML, CSS and SQL. I love closing the gap between an idea and a real world product.
+          </div>
         </div>
       </div>
     </main>
@@ -222,26 +238,27 @@
     <!--  CONTACT -->
     <main class='contact container'>
       <h1>Contact</h1>
-      <ul class='list-unstyled list-inline'>
-        <li>
-          <a href="mailto:s.sebastian.cruz@gmail.com?Subject=Need an awesome software engineer" target='_blank'>
-            <i class="fa fa-envelope fa-2x" aria-hidden="true"></i><br>
-            <span>s.sebastian.cruz@gmail.com</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.google.com/maps/place/San+Francisco,+CA" target='_blank'>
-            <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i><br>
-            <span>San Francisco, CA</span>
-          </a>
-        </li>
-        <li>
+      <div class="contact-wrapper">
+        <ul class='list-unstyled list-inline'>
+          <li>
+            <a href="mailto:s.sebastian.cruz@gmail.com?Subject=Need an awesome software engineer" target='_blank'>
+              <i class="fa fa-envelope fa-2x" aria-hidden="true"></i><br>
+              <span>s.sebastian.cruz@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/place/San+Francisco,+CA" target='_blank'>
+              <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i><br>
+              <span>San Francisco, CA</span>
+            </a>
+          </li>
+          <li>
             <a href="tel:555-555-5555">
               <i class="fa fa-mobile fa-2x" aria-hidden="true"></i><br>
               510-680-6084
             </a>
-        </li>
-      </ul>
+          </li>
+        </ul>
       </div>
     </main>
     <!--  CONTACT END-->
@@ -251,6 +268,11 @@
         <li><a target='_blank' href='https://www.github.com/Sebastiansc'><i class="fa fa-github" aria-hidden="true"></i></a></li>
         <li><a target='_blank' href='https://angel.co/sebastian-cruz-2'><i class="fa fa-angellist" aria-hidden="true"></i></a></li>
         <li><a target='_blank' href='https://www.linkedin.com/in/sebastian-cruz'><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li>
+          <a href="mailto:s.sebastian.cruz@gmail.com?Subject=Need an awesome software engineer" target='_blank'>
+            <i class="fa fa-envelope" aria-hidden="true"></i><br>
+          </a>
+        </li>
       </ul>
     </footer>
     <!--  FOOTER END-->
