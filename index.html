@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Sebastian Cruz</title>
-    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, user-scalable = no">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity = "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/d460849ee8.js"></script>
@@ -149,8 +149,68 @@
       </section>
       <!-- TYPEWARS END-->
 
-    </main>
+      <!-- OVERTRACK -->
+      <section class='container project'>
+        <div class="">
+          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <a href='http://www.overtrack.win' target='_blank' class='project-title'>OVERTRACK</a>
+            <p class='project-description'>
+              Overtrack is a single-page player statistic site for LoL. It uses Riot's public API to collect data from tens of thousands of players and allow user's to view it. I strongly leveraged PostgreSQL json data type to seamlessly store and serve large amounts of data. Implemented Redis on Ruby on Rails to cut response times by more than 70%.
+            </p>
+            <div class="technologies">
+              <span>Ruby</span>
+              <span>Rails</span>
+              <span>Redis</span>
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>Redux</span>
+              <span>Webpack</span>
+              <span>Git</span>
+              <span>CSS3</span>
+              <span>HTML5</span>
+              <span>PostgreSQL</span>
+              <span>jQuery</span>
+            </div>
+            <span class='photo-desc'></span>
+          </div>
+          <a href="http://www.overtrack.win" target='_blank'>
+            <div id = "overtrack-carousel" class = "carousel slide col-xs-12 col-sm-12 col-md-9 col-lg-9">
+              <!-- Carousel indicators -->
+              <ol class = "carousel-indicators">
+                <li data-target = "#overtrack-carousel" data-slide-to = "0" class = "active"></li>
+                <li data-target = "#overtrack-carousel" data-slide-to = "1"></li>
+              </ol>
 
+              <div class = "carousel-inner">
+                <div class = "item active">
+                  <img src = "./assets/images/leaderboard.png" alt = "First slide">
+                </div>
+
+                <div class = "item">
+                  <img src = "./assets/images/lol_profile.png" alt = "Second slide">
+                </div>
+              </div>
+
+              <!-- Carousel nav -->
+              <a class = "carousel-control left" href = "#overtrack-carousel" data-slide = "prev">&lsaquo;</a>
+              <a class = "carousel-control right" href = "#overtrack-carousel" data-slide = "next">&rsaquo;</a>+
+            </div>
+          </a>
+        </div>
+      </section>
+      <!-- OVERTRACK END-->
+    </main>
     <!--  PORTFOLIO END-->
+
+    <!--  ABOUT-->
+      <main class='about container'>
+        <figure class='col-xs-3 col-sm-3 col-md-3 col-lg-4'>
+          <img src="./assets/images/s_cruz.jpg" class='img-responsive me img-rounded' alt="Sebastian Cruz"/>
+        </figure>
+        <div class='desc col-xs-9 col-sm-9 col-md-9 col-lg-8'>
+          I'm a software engineer, entrepeneur and life long learner. I love facing complex problems that force me to find new and better approaches and technologies. I build dynamic web applications using JavaScript, React, Redux, Angular, Python, Ruby, Ruby on Rails, Django, HTML, CSS and SQL. I love closing the gap between an idea and a real world product.
+        </div>
+      </main>
+    <!--  ABOUT END-->
   </body>
 </html>

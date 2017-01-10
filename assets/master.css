@@ -117,6 +117,9 @@ h1 {
   border-bottom: 1px solid white;
 }
 
+.portfolio .project:last-child {
+  border-bottom: none;
+}
 .project-title {
   display: inline-block;
   margin-bottom: 20px;
@@ -143,3 +146,31 @@ h1 {
 }
 
 /*--------------------- PORTFOLIO END ---------------------------- */
+
+/*--------------------- ABOUT ---------------------------- */
+.me {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.photo-container {
+  height: 500px;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+}
+
+.desc {
+  font-size: 20px;
+  line-height: 175%;
+  color: #464b4e;
+  text-align: center;
+}
+/*--------------------- ABOUT END ---------------------------- */
