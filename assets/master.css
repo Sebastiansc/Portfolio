@@ -23,9 +23,19 @@ a:active, a:focus {
 nav {
   background-color: #313233;
   padding: 15px 0;
-  position: absolute;
+  position: fixed;
+  z-index: 1000;
   top: 0;
   width: 100%;
+}
+
+.light-nav {
+  background: white;
+  color: black;
+}
+
+.light-nav a {
+  color: black;
 }
 
 .nav-col {
@@ -38,7 +48,8 @@ nav {
   color: black;
   margin: 10px;
   display: none;
-  position: absolute;
+  z-index: 1000;
+  position: fixed;
   top: 0;
 }
 
@@ -50,6 +61,15 @@ nav {
   z-index: 1000;
   display: none;
 }
+
+.light-nav .fa-times {
+  color: black;
+}
+
+.light-bars {
+  color: white;
+}
+
 /*--------------------- NAV BAR END ---------------------- */
 
 @media(max-width: 768px) {

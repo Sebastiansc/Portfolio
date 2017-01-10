@@ -20,16 +20,16 @@
       <div class='center-block container'>
         <div class="row center-block">
           <div class="nav-col col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <a href="#">Home</a>
+            <a id='home-link' href="#">Home</a>
           </div>
           <div class="nav-col col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <a href="#">Portfolio</a>
+            <a id="port-link" href="#portfolio">Portfolio</a>
           </div>
           <div class="nav-col col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <a href="#">About</a>
+            <a id='about-link' href="#">About</a>
           </div>
           <div class="nav-col col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <a href="#">Contact</a>
+            <a id='contact-link' href="#">Contact</a>
           </div>
         </div>
       <div>
@@ -71,32 +71,34 @@
             </div>
             <span class='photo-desc'></span>
           </div>
-          <div id = "flikr-carousel" class = "carousel slide col-xs-12 col-sm-12 col-md-9 col-lg-9">
-            <!-- Carousel indicators -->
-            <ol class = "carousel-indicators">
-              <li data-target = "#flikr-carousel" data-slide-to = "0" class = "active"></li>
-              <li data-target = "#flikr-carousel" data-slide-to = "1"></li>
-              <li data-target = "#flikr-carousel" data-slide-to = "2"></li>
-            </ol>
+          <a href="http://www.flikr.site" target='_blank'>
+            <div id = "flikr-carousel" class = "carousel slide col-xs-12 col-sm-12 col-md-9 col-lg-9">
+              <!-- Carousel indicators -->
+              <ol class = "carousel-indicators">
+                <li data-target = "#flikr-carousel" data-slide-to = "0" class = "active"></li>
+                <li data-target = "#flikr-carousel" data-slide-to = "1"></li>
+                <li data-target = "#flikr-carousel" data-slide-to = "2"></li>
+              </ol>
 
-            <div class = "carousel-inner">
-              <div class = "item active">
-                 <img src = "./assets/images/photo-detail.png" alt = "First slide">
+              <div class = "carousel-inner">
+                <div class = "item active">
+                  <img src = "./assets/images/photo-detail.png" alt = "First slide">
+                </div>
+
+                <div class = "item">
+                  <img src = "./assets/images/flikr-home.png" alt = "Second slide">
+                </div>
+
+                <div class = "item">
+                  <img src = "./assets/images/profile.png" alt = "Third slide">
+                </div>
               </div>
 
-              <div class = "item">
-                 <img src = "./assets/images/flikr-home.png" alt = "Second slide">
-              </div>
-
-              <div class = "item">
-                 <img src = "./assets/images/profile.png" alt = "Third slide">
-              </div>
+              <!-- Carousel nav -->
+              <a class = "carousel-control left" href = "#flikr-carousel" data-slide = "prev">&lsaquo;</a>
+              <a class = "carousel-control right" href = "#flikr-carousel" data-slide = "next">&rsaquo;</a>+
             </div>
-
-            <!-- Carousel nav -->
-             <a class = "carousel-control left" href = "#flikr-carousel" data-slide = "prev">&lsaquo;</a>
-             <a class = "carousel-control right" href = "#flikr-carousel" data-slide = "next">&rsaquo;</a>+
-          </div>
+          </a>
         </div>
       </section>
       <!-- FLIKR  END-->
@@ -120,27 +122,29 @@
             </div>
             <span class='photo-desc'></span>
           </div>
-          <div id = "typewars-carousel" class = "carousel slide col-xs-12 col-sm-12 col-md-9 col-lg-9">
-            <!-- Carousel indicators -->
-            <ol class = "carousel-indicators">
-              <li data-target = "#typewars-carousel" data-slide-to = "0" class = "active"></li>
-              <li data-target = "#typewars-carousel" data-slide-to = "1"></li>
-            </ol>
+          <a href="https://sebastiansc.github.io/Typewars/" target='_blank'>
+            <div id = "typewars-carousel" class = "carousel slide col-xs-12 col-sm-12 col-md-9 col-lg-9">
+              <!-- Carousel indicators -->
+              <ol class = "carousel-indicators">
+                <li data-target = "#typewars-carousel" data-slide-to = "0" class = "active"></li>
+                <li data-target = "#typewars-carousel" data-slide-to = "1"></li>
+              </ol>
 
-            <div class = "carousel-inner">
-              <div class = "item active">
-                 <img src = "./assets/images/main_menu.png" alt = "First slide">
+              <div class = "carousel-inner">
+                <div class = "item active">
+                  <img src = "./assets/images/main_menu.png" alt = "First slide">
+                </div>
+
+                <div class = "item">
+                  <img src = "./assets/images/typewars.png" alt = "Second slide">
+                </div>
               </div>
 
-              <div class = "item">
-                 <img src = "./assets/images/typewars.png" alt = "Second slide">
-              </div>
+              <!-- Carousel nav -->
+              <a class = "carousel-control left" href = "#typewars-carousel" data-slide = "prev">&lsaquo;</a>
+              <a class = "carousel-control right" href = "#typewars-carousel" data-slide = "next">&rsaquo;</a>+
             </div>
-
-            <!-- Carousel nav -->
-             <a class = "carousel-control left" href = "#typewars-carousel" data-slide = "prev">&lsaquo;</a>
-             <a class = "carousel-control right" href = "#typewars-carousel" data-slide = "next">&rsaquo;</a>+
-          </div>
+          </a>
         </div>
       </section>
       <!-- TYPEWARS END-->
