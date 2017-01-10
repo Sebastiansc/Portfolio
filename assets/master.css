@@ -1,0 +1,120 @@
+a {
+  color: white;
+}
+
+a:hover {
+  color: #8f9193;
+  text-decoration: none;
+}
+
+body {
+  padding-top: 55px;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a:active, a:focus {
+  text-decoration: none;
+  color: #8f9193;
+}
+
+/*--------------------- NAV BAR ---------------------- */
+
+nav {
+  background-color: #313233;
+  padding: 15px 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.nav-col {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+.fa-bars {
+  color: black;
+  margin: 10px;
+  display: none;
+  position: absolute;
+  top: 0;
+}
+
+.fa-times {
+  color: white;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1000;
+  display: none;
+}
+/*--------------------- NAV BAR END ---------------------- */
+
+@media(max-width: 768px) {
+  .fa {
+    display: inline;
+  }
+}
+
+/*--------------------- HOME ---------------------------- */
+
+.sum-up {
+  text-align: center;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+}
+
+h1 {
+  font-size: 70px;
+}
+.last-name {
+  color: rgb(106,168,79);
+}
+
+/*--------------------- HOME END ---------------------------- */
+
+/*--------------------- PORTFOLIO ---------------------------- */
+
+.portfolio {
+  background: rgba(0, 0, 0, 0.81);
+  color: white;
+  padding-top: 0.1px;
+}
+
+.project {
+  padding: 20px 0;
+  border-bottom: 1px solid white;
+}
+
+.project-title {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.technologies span {
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.portfolio-title {
+  font-size: 30px;
+  text-align: center;
+  margin: 30px auto;
+}
+
+/*--------------------- PORTFOLIO END ---------------------------- */
