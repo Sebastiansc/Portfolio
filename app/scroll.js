@@ -17,12 +17,12 @@ const checkScrolls = () => $(document).scroll( () => {
 
   if ($(document).scrollTop() > portfolioTop - 250) {
     $('.animation-wrapper').show();
-    $('.animation-wrapper').addClass('fadeIn');
+    $('.animation-wrapper').addClass('animated fadeIn');
   }
 
   if ($(document).scrollTop() > aboutTop - 350) {
     $('.about-wrapper').show();
-    $('.about-wrapper').addClass('fadeIn');
+    $('.about-wrapper').addClass('animated fadeIn');
   }
 
   if ($(document).scrollTop() > contactTop - 350) {
