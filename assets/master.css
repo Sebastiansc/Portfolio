@@ -221,6 +221,10 @@ h1 {
   .about .row {
     display: flex;
   }
+
+  .contact ul li {
+    margin-right: 50px;
+  }
 }
 
 .about figure {
@@ -244,15 +248,11 @@ h1 {
 
 .contact h1 {
   font-size: 6rem;
-  margin-bottom: 65px;
+  margin-bottom: 6rem;
 }
 
 .contact ul {
   text-align: center;
-}
-
-.contact ul li {
-  margin-right: 50px;
 }
 
 .contact ul li a {
