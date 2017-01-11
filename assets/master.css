@@ -18,12 +18,8 @@ a:active, a:focus {
   color: white;
 }
 
-.animate {
-  transition: font-size 1s;
-}
-
-.animate:hover {
-  font-size: 2em
+li {
+    cursor: pointer;
 }
 
 /*--------------------- NAV BAR ---------------------- */
@@ -199,17 +195,15 @@ h1 {
 
 .about {
   padding-top: 12rem;
-  height: 95vh;
+  height: 80vh;
+  margin-bottom: 20rem;
+  border-bottom: 1px dotted black;
 }
 
 @media(min-width: 931px){
   .about .row {
     display: flex;
   }
-
-  /*.about {
-    margin-bottom: 6rem;
-  }*/
 }
 
 .about figure {
@@ -228,12 +222,12 @@ h1 {
 
 .contact {
   text-align: center;
-  margin-bottom: 35rem;
+  margin-bottom: 30rem;
 }
 
 .contact h1 {
   font-size: 6rem;
-  margin-bottom: 45px;
+  margin-bottom: 65px;
 }
 
 .contact ul {
@@ -241,7 +235,7 @@ h1 {
 }
 
 .contact ul li {
-  margin-right: 5px;
+  margin-right: 50px;
 }
 
 .contact ul li a {
@@ -252,15 +246,20 @@ h1 {
 footer {
   background: #313233;
   height: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: column
   padding: 25px;
   margin-top: 50px;
 }
 
 footer ul {
   display: flex;
+  align-items: center;
+  width: 100%;
   justify-content: space-around;
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   margin: 0;
 }
 /*--------------------- FOOTER END ---------------------------- */

@@ -4,9 +4,44 @@ document.addEventListener("DOMContentLoaded", () => {
   $('.about-wrapper').hide();
   $('.contact-wrapper').hide();
 
-  $('.home').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', () => {
-    $('.home h2').addClass('animated tada');
+  const prefix = (() => {
+    const styles = window.getComputedStyle(document.documentElement, ''),
+      pre = (Array.prototype.slice
+        .call(styles)
+        .join('')
+        .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
+      )[1],
+      dom = ('WebKit|Moz|MS|O').match(new RegExp('(' + pre + ')', 'i'))[1];
+    return {
+      dom: dom,
+      lowercase: pre,
+      css: '-' + pre + '-',
+      js: pre[0].toUpperCase() + pre.substr(1)
+    };
+  })();
+
+  const animationEnd = `
+                        ${prefix['lowercase']}AnimationEnd
+                        ${prefix['lowercase']}animationend
+                       `;
+  $.fn.extend({
+    animateCss: function (animationName) {
+        $(this).addClass(`animated ${animationName}`).one(animationEnd, () => {
+            // debugger;
+            $(this).removeClass(`animated ${animationName}`);
+            console.log($(this));
+        });
+    }
   });
+
+  $('.popper li').mouseover( (e) => {
+    $(e.currentTarget).animateCss('rubberBand');
+  });
+
+  $('.home').one(animationEnd, (e) => {
+    $('.home-h2').animateCss('tada');
+  });
+
 
   $('.fa-bars').click( e => {
     $('.fa-bars').toggle('fast', () => {
@@ -22,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $('#home-link').click( () => {
     $('html,body').animate({
         scrollTop: $(".home").offset().top + 20},
-        'slow');
+        'slow', () => $('.home-h2').animateCss('tada'));
   });
 
   $('#port-link').click( () => {
@@ -62,18 +97,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if ($(document).scrollTop() > portfolioTop - 250) {
       $('.animation-wrapper').show();
-      $('.animation-wrapper').addClass('animated fadeIn');
+      $('.animation-wrapper').addClass('fadeIn');
     }
 
     if ($(document).scrollTop() > aboutTop - 350) {
       $('.about-wrapper').show();
-      $('.about-wrapper').addClass('animated fadeIn');
+      $('.about-wrapper').addClass('fadeIn');
     }
 
     if ($(document).scrollTop() > contactTop - 350) {
       $('.contact-wrapper').show();
-      $('.contact-wrapper').addClass('animated fadeIn');
-      $('.contact ul li').addClass('animated swing');
+      $('.contact-wrapper').animateCss('fadeIn');
+      $('.contact ul li').animateCss('swing');
     }
   });
 
