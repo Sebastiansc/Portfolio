@@ -52,10 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
     $(e.currentTarget).animateCss('rubberBand');
   });
 
+  // After Name and icons fall down
   $('.home').one(animationEnd, (e) => {
     $('.home-h2').animateCss('tada');
   });
 
+  $('.contact').one(animationEnd, (e) => {
+    $('.contact ul li').animateCss('swing');
+  });
 
   $('.fa-bars').click( e => {
     $('.fa-bars').toggle('fast', () => {
@@ -89,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $('#contact-link').click( () => {
     $('html,body').animate({
         scrollTop:  $(document).height() + 1000},
-        'slow');
+        'slow', () => $('.contact ul li').animateCss('swing'));
   });
 
 });

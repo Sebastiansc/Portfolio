@@ -25,10 +25,9 @@ const checkScrolls = () => $(document).scroll( () => {
     $('.about-wrapper').addClass('animated fadeIn');
   }
 
-  if ($(document).scrollTop() > contactTop - 350) {
+  if ($(document).scrollTop() > contactTop - 500) {
     $('.contact-wrapper').show();
-    $('.contact-wrapper').animateCss('fadeIn');
-    $('.contact ul li').animateCss('swing');
+    $('.contact').addClass('animated fadeIn');
   }
 });
 

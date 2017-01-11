@@ -102,8 +102,13 @@
 	    $(e.currentTarget).animateCss('rubberBand');
 	  });
 	
+	  // After Name and icons fall down
 	  $('.home').one(animationEnd, function (e) {
 	    $('.home-h2').animateCss('tada');
+	  });
+	
+	  $('.contact').one(animationEnd, function (e) {
+	    $('.contact ul li').animateCss('swing');
 	  });
 	
 	  $('.fa-bars').click(function (e) {
@@ -136,7 +141,9 @@
 	
 	  $('#contact-link').click(function () {
 	    $('html,body').animate({
-	      scrollTop: $(document).height() + 1000 }, 'slow');
+	      scrollTop: $(document).height() + 1000 }, 'slow', function () {
+	      return $('.contact ul li').animateCss('swing');
+	    });
 	  });
 	});
 
@@ -264,10 +271,9 @@
 	      $('.about-wrapper').addClass('animated fadeIn');
 	    }
 	
-	    if ($(document).scrollTop() > contactTop - 350) {
+	    if ($(document).scrollTop() > contactTop - 500) {
 	      $('.contact-wrapper').show();
-	      $('.contact-wrapper').animateCss('fadeIn');
-	      $('.contact ul li').animateCss('swing');
+	      $('.contact').addClass('animated fadeIn');
 	    }
 	  });
 	};
