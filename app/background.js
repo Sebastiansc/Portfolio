@@ -50,7 +50,6 @@ class BackgroundManager {
   tweenComplete(circle){
     this.stage.removeChild(circle);
   }
-
 }
 
 export default BackgroundManager;
