@@ -22,6 +22,17 @@ li {
     cursor: pointer;
 }
 
+/*--------------------- CANVAS END ---------------------- */
+  #canvas {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+/*--------------------- CANVAS  ---------------------- */
+
 /*--------------------- NAV BAR ---------------------- */
 
 nav {
