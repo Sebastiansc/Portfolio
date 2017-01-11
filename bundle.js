@@ -60,6 +60,15 @@
 	  $('.animation-wrapper').hide();
 	  $('.about-wrapper').hide();
 	  $('.contact-wrapper').hide();
+	  $('flikr-carousel').carousel({
+	    interval: false
+	  });
+	  $('typewars-carousel').carousel({
+	    interval: false
+	  });
+	  $('overtrack-carousel').carousel({
+	    interval: false
+	  });
 	
 	  (0, _scroll2.default)();
 	
