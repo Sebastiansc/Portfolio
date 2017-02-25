@@ -4,6 +4,9 @@ const checkScrolls = () => $(document).scroll( () => {
   let barsTop = $('.fa-bars').offset().top;
   let aboutTop = $('.about').offset().top;
   let contactTop = $('.contact').offset().top;
+
+  let portLoaded, contactLoaded, aboutLoaded;
+
   if (navTop > aboutTop || barsTop > aboutTop){
     $('nav').removeClass('light-nav');
     $('.fa-bars').removeClass('light-bars');
@@ -15,10 +18,11 @@ const checkScrolls = () => $(document).scroll( () => {
     $('.fa-bars').removeClass('light-bars');
   }
 
-  if ($(document).scrollTop() > portfolioTop - 250) {
-    $('.animation-wrapper').show();
-    $('.animation-wrapper').addClass('animated fadeIn');
-  }
+  // if ($(document).scrollTop() > portfolioTop - 100) {
+  //   if (portLoaded) return;
+  //   portLoaded = true;
+  //   $('.animation-wrapper').addClass('loaded');
+  // }
 
   if ($(document).scrollTop() > aboutTop - 350) {
     $('.about-wrapper').show();

@@ -2,7 +2,6 @@ import BackgroundManager from './background.js';
 import checkScrolls from './scroll.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-  $('.animation-wrapper').hide();
   $('.about-wrapper').hide();
   $('.contact-wrapper').hide();
   $('flikr-carousel').carousel({
@@ -49,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   $('.popper li').mouseover( (e) => {
-    $(e.currentTarget).animateCss('rubberBand');
+    $(e.currentTarget).animateCss('pulse');
   });
 
   // After Name and icons fall down

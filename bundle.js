@@ -57,7 +57,6 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	document.addEventListener("DOMContentLoaded", function () {
-	  $('.animation-wrapper').hide();
 	  $('.about-wrapper').hide();
 	  $('.contact-wrapper').hide();
 	  $('flikr-carousel').carousel({
@@ -99,7 +98,7 @@
 	  });
 	
 	  $('.popper li').mouseover(function (e) {
-	    $(e.currentTarget).animateCss('rubberBand');
+	    $(e.currentTarget).animateCss('pulse');
 	  });
 	
 	  // After Name and icons fall down
@@ -250,6 +249,11 @@
 	    var barsTop = $('.fa-bars').offset().top;
 	    var aboutTop = $('.about').offset().top;
 	    var contactTop = $('.contact').offset().top;
+	
+	    var portLoaded = void 0,
+	        contactLoaded = void 0,
+	        aboutLoaded = void 0;
+	
 	    if (navTop > aboutTop || barsTop > aboutTop) {
 	      $('nav').removeClass('light-nav');
 	      $('.fa-bars').removeClass('light-bars');
@@ -261,10 +265,11 @@
 	      $('.fa-bars').removeClass('light-bars');
 	    }
 	
-	    if ($(document).scrollTop() > portfolioTop - 250) {
-	      $('.animation-wrapper').show();
-	      $('.animation-wrapper').addClass('animated fadeIn');
-	    }
+	    // if ($(document).scrollTop() > portfolioTop - 100) {
+	    //   if (portLoaded) return;
+	    //   portLoaded = true;
+	    //   $('.animation-wrapper').addClass('loaded');
+	    // }
 	
 	    if ($(document).scrollTop() > aboutTop - 350) {
 	      $('.about-wrapper').show();
